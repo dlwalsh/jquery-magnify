@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mag</title>
+        <style>
+	    body {
+		margin: 50px auto;
+		max-width: 1250px;
+		overflow-x: hidden;
+		position: relative;
+	    }
+            .box {
+                border: 1px solid black;
+		cursor: -webkit-zoom-in;
+		cursor: zoom-in;
+		display: inline-block;
+                height: 205px;
+		margin-bottom: 1px;
+		position: relative;
+                width: 273px;
+            }
+            .output {
+                border: 1px solid black;
+                height: 410px;
+		margin-top: 5px;
+		position: relative;
+                width: 546px;
+            }
+	    .box img {
+		display: block;
+	    }
+            .glass {
+	        background: white;
+                background: rgba(255, 255, 255, 0.75);
+		border: 1px solid white;
+		position: absolute;
+            }
+	    .pull-left {
+		float: left;
+                margin-left: 50px;
+	    }
+	    .pull-right {
+		float: right;
+		margin-right: 50px;
+	    }
+        </style>
+    </head>
+    <body>
+	<div class="pull-left">
+	    <div>
+		<div class="box" data-image="http://www.sports-logos-screensavers.com/user/Baltimore_Ravens.jpg">
+		    <img src="http://www.sports-logos-screensavers.com/user/Baltimore_Ravens.jpg" width="273" height="205">
+		</div>
+		<div class="box" data-image="http://www.sports-logos-screensavers.com/user/Cleveland_Browns.jpg">
+		    <img src="http://www.sports-logos-screensavers.com/user/Cleveland_Browns.jpg" width="273" height="205">
+		</div>
+	    </div>
+	    <div>
+		<div class="box" data-image="http://www.sports-logos-screensavers.com/user/Cincinnati_Bengals.jpg">
+		    <img src="http://www.sports-logos-screensavers.com/user/Cincinnati_Bengals.jpg" width="273" height="205">
+		</div>
+		<div class="box" data-image="http://www.sports-logos-screensavers.com/user/Pittsburgh_Steelers.jpg">
+		    <img src="http://www.sports-logos-screensavers.com/user/Pittsburgh_Steelers.jpg" width="273" height="205">
+		</div>
+	    </div>
+	</div>
+        <div id="output" class="output pull-right"></div>
+        <script src="js/jquery-2.0.2.min.js"></script>
+        <script src="js/mag.js"></script>
+        <script>
+            jQuery(function ($) {
+                $('.box').magGlass({
+			output: '#output',
+			scale: 5,
+			className: 'glass'
+		  });
+            });
+        </script>
+    </body>
+</html>
