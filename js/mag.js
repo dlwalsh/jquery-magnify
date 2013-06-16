@@ -5,7 +5,7 @@
 
     'use strict';
 
-    $.fn.magGlass = function (options) {
+    $.fn.magnify = function (options) {
         
         var $output, magHeight, magWidth;
         
